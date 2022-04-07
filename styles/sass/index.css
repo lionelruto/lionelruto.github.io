@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik:400i,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans","raleway", sans-serif;
+}
+
+/*---Debuts acceuil*/
+/*---header*/
+header {
+  width: 100%;
+  background-color: #77C1EF;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+}
+
+header .contact {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/*---texte et image d'intro*/
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 3;
+  width: 95%;
+}
+
+.intro .presentation {
+  margin-top: 20px;
+}
+
+.intro .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 50px;
+}
+
+.intro .text .animated_name {
+  text-decoration: underline;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.intro .text .naming {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.intro .text .naming .hello {
+  color: #FFDF00;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.intro .text .naming p {
+  font-size: 25px;
+}
+
+.intro .namingButtons {
+  margin-top: 20px;
+}
+
+.intro .namingButtons .Btnhire {
+  background-color: #77C1EF;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 15px #999595;
+          box-shadow: 2px 2px 15px #999595;
+  width: 100px;
+  height: 45px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.intro .namingButtons .Btncv {
+  border-color: #77C1EF;
+  background-color: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 15px #77C1EF;
+          box-shadow: 2px 2px 15px #77C1EF;
+  width: 100px;
+  height: 45px;
+  color: #77C1EF;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+/*---aside*/
+.floatingMenu {
+  width: 100px;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 15px #F2F2F2;
+          box-shadow: 2px 2px 15px #F2F2F2;
+  background-color: #ffffff;
+  margin-left: 20px;
+  position: absolute;
+  top: 110px;
+  right: 25px;
+  z-index: 105;
+}
+
+.floatingMenu hr {
+  height: 1px;
+  border-width: 0;
+  width: 70px;
+  background-color: #020d0d;
+  color: #020d0d;
+}
+
+.floatingMenu .navigation {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.floatingMenu .navigation i {
+  margin-top: 20px;
+  color: #77C1EF;
+  font-size: 30px;
+}
+
+.floatingMenu .navigation p {
+  margin-top: 15px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/*---Debuts about Me*/
+.AboutMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.AboutMe img {
+  width: 100%;
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+}
+
+.AboutMe .IntroMe {
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
+}
+
+.AboutMe .IntroMe button {
+  background-color: #77C1EF;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 15px #999595;
+          box-shadow: 2px 2px 15px #999595;
+  width: 100px;
+  height: 45px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.AboutMe .IntroMe .textIntro {
+  max-width: 350px;
+}
+
+.AboutMe .skillList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 350px;
+}
+
+.AboutMe .skillList .skills {
+  border-radius: 10px;
+  margin-top: 10px;
+  max-width: 45px;
+  max-height: 40px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 2px 2px 15px #e6e5e5;
+          box-shadow: 2px 2px 15px #e6e5e5;
+  padding: 30px;
+}
+
+.AboutMe .abtTilte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.AboutMe .abtTilte hr {
+  width: 30px;
+  height: 3px;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  background-color: #FFDF00;
+  color: #FFDF00;
+}
+
+.AboutMe .abtTilte h3 {
+  margin-left: 20px;
+  color: #77C1EF;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*mes services */
+.servicePart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.servicePart hr {
+  width: 250px;
+  height: 5px;
+  border-width: 0;
+  background-color: #FFDF00;
+  color: #FFDF00;
+}
+
+.serviceDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+}
+
+.serviceDiv .service {
+  border-radius: 10px;
+  margin-top: 10px;
+  max-width: 240px;
+  background-color: #77C1EF;
+  -webkit-box-shadow: 2px 2px 15px #e6e5e5;
+          box-shadow: 2px 2px 15px #e6e5e5;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.serviceDiv .service .servIcon {
+  background-color: #ffffff;
+  max-width: 240px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+.serviceDiv .service p {
+  margin: 25px;
+}
+
+.serviceDiv .service .infoserv {
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.serviceDiv .service .fa-star {
+  margin-top: 10px;
+  color: #FFDF00;
+}
+
+.serviceDiv .service .fs {
+  margin-top: 10px;
+  color: #FFDF00;
+  font-size: 60px;
+}
+
+/*footer*/
+footer {
+  margin-top: 50px;
+  background-color: #77C1EF;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footerInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+}
+
+footer .footMenu {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footMenu p {
+  margin-left: 36px;
+}
+
+footer .formContaint {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: end;
+}
+
+footer .formContaint .myForm {
+  max-width: 400px;
+}
+
+footer .formContaint .myForm .subBtn {
+  border-color: #77C1EF;
+  background-color: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 15px #77C1EF;
+          box-shadow: 2px 2px 15px #77C1EF;
+  width: 100px;
+  height: 45px;
+  width: 100%;
+}
+
+footer .formContaint .myForm .inputform {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.copyright i {
+  font-size: 25px;
+  margin-left: 25px;
+}
+/*# sourceMappingURL=index.css.map */

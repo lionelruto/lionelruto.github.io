@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "le portfolio de lionel ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass styles/sass/index.scss styles/index.css"
+  },
+  "author": "Lionel Mambingo",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.49.11"
+  }
+}

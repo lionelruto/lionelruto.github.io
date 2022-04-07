@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400i,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$color-palette1:#77C1EF; //#485D71
+$color-palette-opacity:#b5dff9; //#485D71
+$color-background:#ffffff;
+$color-background-secondary:#f3efef;
+$hello-color: #FFDF00;
+
+@mixin buttonStyle {
+    
+       background-color: $color-palette1;
+       border:none;
+       border-radius: 5px;
+       box-shadow: 2px 2px 15px #999595;
+       width: 100px;
+       height: 45px;   
+ }
+
+ @mixin hrStyle {
+     hr{
+         width: 30px;
+         height: 3px;
+         margin: 0;
+         padding: 0;
+         border-width:0;
+         background-color: $hello-color;
+         color: $hello-color;
+     }
+     
+ }
+
+ @mixin titleIntro {
+     margin-left: 20px;
+    color: $color-palette1;
+     font: {
+         size: 20px;
+         weight: bold;
+     }
+ }
+
+ @mixin buttonStyle2 {
+    
+    border-color: $color-palette1;
+    background-color: $color-background;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px $color-palette1;
+    width: 100px;
+    height: 45px;   
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+
+h3{
+    font: {
+        size: 30px;
+        weight: bold;
+        
+    }
+}
+
+body  {
+    background-color: $color-background;
+    margin:0;
+    padding:0;
+    font-family: "Open Sans","raleway", sans-serif;
+ }
+ /*---Debuts acceuil*/
+
+ /*---header*/
+ header {
+     width: 100%;
+    background-color: $color-palette1;
+    color: $color-background;
+    display: flex;
+    height: 50px;
+    
+    
+    .contact{
+        width: 100%;
+      display: flex ;
+      margin-top: 15px;
+      justify-content: space-around;
+    }
+  }
+  
+ /*---texte et image d'intro*/
+.intro{
+    display: flex;
+    z-index: 3;
+    width: 95%;
+
+
+    .presentation{
+        margin-top: 20px;
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 50px;
+
+        .animated_name{
+            text-decoration: underline;
+            margin-top: 20px;
+            font: {
+                size: 30px;
+                weight: bold;
+            }
+
+        }
+
+        .naming{
+
+                display: flex;
+
+                align-items: baseline;
+        
+                .hello{
+                    color: $hello-color;
+                    font: {
+                        size: 45px;
+                        weight: bold;
+                    }
+                }
+        
+                p{
+                    font: {
+                        size: 25px;
+                    }            
+                }
+                
+            
+        }
+    }
+
+    .namingButtons{
+
+        margin-top: 20px;
+
+        .Btnhire{
+            @include buttonStyle();
+            color: $color-background;
+            font: {
+                weight: bold;
+            }
+        }
+
+        .Btncv{
+            @include buttonStyle2();
+            color: $color-palette1;
+            margin-left: 20px;
+            font: {
+                weight: bold;
+            }
+        }
+    }
+
+
+}
+
+ /*---aside*/
+
+ .floatingMenu{
+    width: 100px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px #F2F2F2;
+    background-color: $color-background;
+    margin-left: 20px;
+    position: absolute;
+    top: 110px;
+    right: 25px;
+    z-index: 105;
+     hr{
+        height: 1px;
+        border-width:0;
+        width: 70px;
+        background-color: rgb(2, 13, 13);
+        color: rgb(2, 13, 13);
+      }
+
+      .navigation{
+
+        text-align: center;
+        margin-bottom: 10px;
+        i{
+            margin-top: 20px;
+            color: $color-palette1;
+            font: {
+                size: 30px;
+            }
+        }
+
+        p{
+            margin-top: 15px;
+            font: {
+                size: 11px;
+                weight:bold
+            }
+        }
+      }
+ }
+
+
+  /*---Debuts about Me*/
+
+  .AboutMe{
+      display: flex;
+      width: 100%;
+
+      img{
+          width: 100%;
+          flex:20%;
+      }
+
+      .IntroMe{
+          flex: 40%;
+        button{
+            @include buttonStyle();
+            margin-top: 20px;
+            color: $color-background;
+        }
+
+        .textIntro{
+            max-width: 350px;
+        }
+
+      }
+
+      .skillList{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          max-width: 350px;
+
+          .skills{
+            border-radius: 10px;
+            margin-top: 10px;
+            max-width: 45px;
+            max-height: 40px;
+            background-color: $color-background;
+            box-shadow: 2px 2px 15px #e6e5e5;
+            padding: 30px;
+            
+        }          
+      }
+
+
+      .abtTilte{
+
+        display: flex;
+        margin-top: 20px;
+        align-items: baseline;
+        @include hrStyle;
+
+        h3{
+         @include titleIntro();   
+        }
+      }
+  }
+
+
+  /*mes services */
+
+  .servicePart{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      hr{
+          width: 250px;
+          height: 5px;
+          border-width: 0;
+          background-color: $hello-color;
+          color: $hello-color;
+      }
+  }
+
+  .serviceDiv{
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+
+      .service{
+        border-radius: 10px;
+        margin-top: 10px;
+        max-width: 240px;
+        background-color: $color-palette1;
+        box-shadow: 2px 2px 15px #e6e5e5;
+        text-align: center;
+        padding-bottom: 10px;
+
+        .servIcon{
+            background-color: $color-background;
+            max-width: 240px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 10px;
+        }
+
+        p{
+            margin: 25px;
+        }
+
+        .infoserv{
+            color: $color-background;
+            font: {
+                weight: bolder;
+                size:25px
+            }
+        }
+
+        .fa-star{
+            margin-top: 10px;
+            color: $hello-color;            
+        }
+
+        .fs{
+            margin-top: 10px;
+            color: $hello-color;
+            font: {
+                size: 60px;
+            }
+        }
+      }
+  }
+
+
+  /*footer*/
+
+  footer{
+      margin-top: 50px;
+      background-color: $color-palette1;
+      color: $color-background;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      display: flex;
+      
+
+      .footerInfo{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          width: 60%;
+      }
+
+      .footMenu{
+          text-align: center;
+          display: flex;
+
+          p{
+              margin-left: 36px
+          }
+          
+          
+      }
+
+      .formContaint{
+        width: 40%;
+        display: flex;
+        align-items: flex-end;
+        text-align: end;
+        .myForm{
+            max-width: 400px;
+            .subBtn{
+              @include buttonStyle2();
+              width: 100%;
+          }
+    
+          .inputform{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+          }
+        }
+  
+    }
+      }
+
+  .copyright{
+      display: flex;
+      i{
+          font-size: 25px;
+          margin-left: 25px;
+      }
+      
+  }
