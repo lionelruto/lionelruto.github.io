@@ -268,7 +268,7 @@ $(document).ready(function() {
                     })               
                 });
                 var img = document.createElement("img");
-                img.src = "../../assets/images/LM-logo/LM-logo/LM Blanc.png";
+                img.src = "./../assets/images/LM-logo/LM-logo/LM Blanc.png";
                 img.style.width="40px"
                 img.style.height="40px"
                 img.style.marginLeft = "60px" 

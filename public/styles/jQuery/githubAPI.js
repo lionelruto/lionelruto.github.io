@@ -51,7 +51,7 @@ const imgLogoContent= document.getElementById("imgLogoDiv")
     var imgSource = document.createElement("img")
     var cssString= "width: 480px; height: 350px; flex-shrink: 0; flex-grow: 1; text-align: center; margin-left: 20px; border: 1px solid #F5F5F5;border-radius: 10px;cursor: pointer;transform: scale(1);transition: transform 300ms;"
     //realist.setAttribute("style", cssString)
-    imgSource.src= "../../assets/images/cloudbeds.png"
+    imgSource.src= "./../assets/images/cloudbeds.png"
     //var realist = realist.appendChild(imgSource)
 
     realistInfo.classList.add('realist_info')
@@ -71,9 +71,9 @@ const imgLogoContent= document.getElementById("imgLogoDiv")
 
     realistType.classList.add('realist_type')
     var imgLogo1= document.createElement("img")
-    imgLogo1.src= "../../assets/images/icons8-android-os-48.png"
+    imgLogo1.src= "./../assets/images/icons8-android-os-48.png"
     var imgLogo2= document.createElement("img")
-    imgLogo2.src="../../assets/images/icons8-docker-48.png"
+    imgLogo2.src="./../assets/images/icons8-docker-48.png"
 
     realistType.appendChild(imgLogo1)
     realistType.appendChild(imgLogo2)
