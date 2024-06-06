@@ -47,7 +47,7 @@ header {
   height: 50px;
 }
 header .contact {
-  width: 100%;
+  width: 81%;
   display: flex;
   padding: 10px;
   justify-content: space-around;
@@ -87,7 +87,6 @@ header .breadcontent #breadcumbs {
   width: 40%;
 }
 .intro .text .animated_name {
-  margin-top: 20px;
   white-space: nowrap;
   overflow: hidden;
   width: fit-content;
@@ -131,6 +130,8 @@ header .breadcontent #breadcumbs {
   height: 45px;
   color: #ffffff;
   position: relative;
+  padding: 13px;
+  cursor: pointer;
   z-index: 1;
   font-weight: bold;
 }
@@ -226,7 +227,6 @@ header .breadcontent #breadcumbs {
   visibility: visible;
   padding: 15px;
   height: 75%;
-  max-height: 75%;
   transform: scale(1);
   transition: transform 300ms;
 }

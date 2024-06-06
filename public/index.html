@@ -33,7 +33,15 @@
             <div class="contact" id="contact">
                 <p>Tel: +237-696360062 / +237-699948689</p> 
                 <p>BPbox: Rue boue de lapeyrere </p> 
-                <p>email: lionelmambingo@gmail.com</p>                   
+                <p>email: lionelmambingo@gmail.com</p>
+                <div style="display: flex;align-items: center;padding-left: 100px;">
+                    <label for="lang"><i class="material-icons filled" style="width: 30px;" >language_outline</i></label>
+                    <select name="lang" id="lang" style="border: none;background-color: #77C1EF;color: #FFFFFF;opacity: 1;font-size: large;">
+                        <option value="fr">Fr</option>
+                        <option value="en">En</option>
+    
+                    </select>
+                </div>                   
             </div>
 
         </header>
@@ -43,27 +51,26 @@
             <section class="intro" id="acceuil">
                 <div class="text">
                     <div class="naming">
-                       <h2 class="hello">Hello</h2><p>, je suis</p>                        
+                       <h2 class="hello" id="hey"></h2><p id="im"></p>                        
                     </div>
 
                     <div class="animated_Content" id="animated_Content"></div>
 
                     <div class="presentation">
-                        <p>je suis un développeur web, Android et QA Engineer passionné par la création de solutions numériques innovantes. Fort d'une expérience dans le développement logiciel, je m'engage à produire des produits de qualité qui répondent aux besoins de mes utilisateurs.</p>
+                        <p id="presentations"></p>
                     </div>
                     <div class="namingButtons">
-                        <button class="Btnhire">Me recruter</button>
-                        <button class="Btncv">Mon CV</button>
+                        <a class="Btnhire" id="recruitMe" href="mailto:lionelmambingo@gmail.com"></a>
+                        <button class="Btncv" id="btncv"> </button>
                     </div>
                 </div>
                 <img src="./assets/images/black man at office-2.png" alt="blackDev" id="imgLogo1" class="imgLogo1"/>            
             </section>
-
             <div class="navFixed" id="navFixed">
-                <section >
+                <section>
                     <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
                         <hr style="align-items: center; height: 3px;border-width: 0;width: 50px; margin: 0; padding: 0; color: 0; background-color: #FFDF00;"/>
-                        <h3 style="color: #77C1EF; align-items: center; padding: 10px; text-transform: uppercase;">Mes Competences</h3>
+                        <h3 style="color: #77C1EF; align-items: center; padding: 10px; text-transform: uppercase;" id="competences"></h3>
                         <hr style="align-items: center; height: 3px;border-width: 0;width: 50px; margin: 0; padding: 0; color: 0; background-color:#FFDF00;"/>
                     </div>
                     <div class="AboutMe">
@@ -74,18 +81,18 @@
     
                         <div class="IntroMe" id="aboutM">
                             <div class="abtTilte">
-                                <hr/> <h3>A Propos de Moi</h3>
+                                <hr/> <h3 id="about"></h3>
                             </div> 
                             <div class="textIntro">
-                                <div class="techskills"><h4>programmation:</h4><p>Html, XML, css, javascript, phyton, java, php, typescript</p></div>
-                                <div class="techskills"><h4>SGBD:</h4> <p>Mysql, MongoDB, PostGres, Oracle</p></div>
-                                <div class="techskills"><h4>Gestion de projet:</h4> <p>Agile</p></div>
-                                <div class="techskills"><h4>Conception:</h4><p>UML, design pattern</p></div>
-                                <div class="techskills"><h4>Tests:</h4><p>Mockito, JUnit, express, robot Framework, selenium, appium</p></div>
+                                <div class="techskills"><h4 id="programmation">:</h4><p>Html, XML, css, javascript, phyton, java, php, typescript</p></div>
+                                <div class="techskills"><h4 id="database">:</h4> <p>Mysql, MongoDB, PostGres, Oracle</p></div>
+                                <div class="techskills"><h4 id="gestionP">:</h4> <p>Agile</p></div>
+                                <div class="techskills"><h4 id="conception">:</h4><p>UML, design pattern</p></div>
+                                <div class="techskills"><h4 id="tests">:</h4><p>Mockito, JUnit, express, robot Framework, selenium, appium</p></div>
                             </div>
         
                             <div class="abtTilte">
-                                <hr/> <h3>My Skills</h3>
+                                <hr/> <h3 id="skills"> </h3>
                             </div>
         
                             <div class="skillList">
@@ -131,11 +138,12 @@
                             </div>
                         </div>
                     </div>
+                </section>
 
-                </section class="experience">
+                <section class="experience">
                     <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
                         <hr style="align-items: center; height: 3px;border-width: 0;width: 50px; margin: 0; padding: 0; color: 0; background-color: #FFDF00;"/>
-                        <h3 style="color: #77C1EF; align-items: center; padding: 10px; text-transform: uppercase;">Expériences</h3>
+                        <h3 style="color: #77C1EF; align-items: center; padding: 10px; text-transform: uppercase;" id="experience"></h3>
                         <hr style="align-items: center; height: 3px;border-width: 0;width: 50px; margin: 0; padding: 0; color: 0; background-color:#FFDF00;"/>
                     </div>
 
@@ -291,16 +299,12 @@
                             </div>
                         </div>
                     </div>
-
-
-                <section>
-
                 </section>
-    
+   
                 <section class="servicePart" id="services">
                     <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
                         <hr style="align-items: center; height: 3px;border-width: 0;width: 50px; margin: 0; padding: 0; color: 0; background-color: #FFDF00;"/>
-                        <h3 style="color: #77C1EF; align-items: center; padding: 10px; text-transform: uppercase;">Mes services</h3>
+                        <h3 style="color: #77C1EF; align-items: center; padding: 10px; text-transform: uppercase;" id="myServices">Mes services</h3>
                         <hr style="align-items: center; height: 3px;border-width: 0;width: 50px; margin: 0; padding: 0; color: 0; background-color:#FFDF00;"/>
                     </div>
                     <hr/>
@@ -308,10 +312,8 @@
                         <div class="service">
                             <i class="material-icons-two-tone" >code_off</i>
                             <div>
-                                <h3 class="infoserv">DEVELPOPPEUR</h3>
-                                <p>Doté d'une expertise approfondie en développement logiciel,
-                                     je suis passionné par la création d'applications innovantes 
-                                     qui répondent aux besoins des utilisateurs tout en repoussant les limites de la technologie.</p>
+                                <h3 class="infoserv" id="dev"></h3>
+                                <p id="descDev"></p>
                             </div>
                             <span class="etoilebleu">
                                 <i class="material-icons">star</i>
@@ -326,10 +328,8 @@
                         <div class="service">
                             <i class="material-icons-two-tone">rocket_launch</i>
                             <div>
-                                <h3 class="infoserv">SEO</h3>
-                                <p>Maîtrisant les arcanes du référencement et de l'optimisation web, je suis
-                                     déterminé à propulser mes clients vers les sommets des classements de recherche, 
-                                     grâce à des stratégies efficaces et à une compréhension approfondie des algorithmes</p>
+                                <h3 class="infoserv" id="seo"></h3>
+                                <p id="descSEO"></p>
                             </div>
                             <span class="etoilebleu">
                                 <i class="material-icons">star</i>
@@ -343,9 +343,8 @@
                         <div class="service">
                             <i class="material-icons-two-tone">adb</i>                            
                             <div>
-                                <h3 class="infoserv">MOBILE APP</h3>
-                                <p>Avec une passion pour la mobilité et une solide expérience en développement d'applications mobiles, 
-                                    je suis déterminé à concevoir des expériences utilisateur exceptionnelles sur les plateformes Android et iOS</p>
+                                <h3 class="infoserv" id="mobile"></h3>
+                                <p id="descMobile"></p>
                             </div>
                             <span class="etoilebleu">
                                 <i class="material-icons">star</i>
@@ -358,12 +357,10 @@
                         </div>
 
                         <div class="service">
-                            <i class="material-icons-two-tone">bug_report</i>
+                            <i class="material-icons-two-tone" >bug_report</i>
                             <div>
-                                <h3 class="infoserv">Tesing</h3>
-                                <p>LExpert en assurance qualité logicielle, je mets en œuvre des stratégies de test rigoureuses 
-                                    pour garantir la qualité et la fiabilité des applications et des sites web, offrant ainsi une 
-                                    expérience utilisateur optimale</p>
+                                <h3 class="infoserv" id="test" ></h3>
+                                <p id="descTest"></p>
                             </div>
                             <span class="etoilebleu">
                                 <i class="material-icons filled" >star</i>
@@ -378,7 +375,7 @@
                 <section class="myReals">
                     <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
                         <hr style="align-items: center; height: 3px;border-width: 0;width: 50px; margin: 0; padding: 0; color: 0; background-color: #FFDF00;"/>
-                        <h3 style="color: #77C1EF; align-items: center; padding: 10px; text-transform: uppercase;">Mes Realisations</h3>
+                        <h3 style="color: #77C1EF; align-items: center; padding: 10px; text-transform: uppercase;" id="realsTitle"></h3>
                         <hr style="align-items: center; height: 3px;border-width: 0;width: 50px; margin: 0; padding: 0; color: 0; background-color:#FFDF00;"/>
                     </div>
                     <div class="carroussel-content" id="carroussel-content">
@@ -387,9 +384,6 @@
 
                 </section>
             </div>
-
-
-
 <!--debut menu foltant de droite-->
             <aside class="floatingMenu" id="floatingMenu">
                 <div class="navContaint" id="navContaint">
@@ -399,7 +393,7 @@
 
                             </div>
                             <a href="#acceuil">
-                                <p>Acceuil</p>
+                                <p id="acceuilfloat"></p>
                             </a>
                         </div>
                     </div>
@@ -410,7 +404,7 @@
 
                             </div>
                             <a href="#aboutM">
-                                <p>A propos de moi</p>
+                                <p id="Aproposfloat"></p>
                             </a>
                         </div>
                     </div>
@@ -421,7 +415,7 @@
 
                             </div>
                             <a href="#services">
-                                <p>Services</p>
+                                <p id="servicesfloat"></p>
                             </a>
     
                         </div>
@@ -432,7 +426,7 @@
 
                             </div>
                             <a href="#mesReas">
-                                <p>Mes réalisations</p>
+                                <p id="realsfloat"></p>
                             </a>
                         </div>
                     </div>
@@ -443,14 +437,14 @@
 
                             </div>
                             <a href="#contact">
-                                <p>Contacts</p>
+                                <p id="contactfloat"></p>
                             </a>
                         </div>
                     </div>    
                 </div>
             </aside> 
-
         </main>
+
         <!--debut du footer et fin du main-->
         <footer class="footer" id="contact">
             <div class="">
@@ -459,20 +453,20 @@
 
             <div class="footerInfo">
                 <div>
-                    <p style="font-size: large; font-weight: bold; font-style: oblique; color: #77C1EF;">Menu</p>
+                    <p style="font-size: large; font-weight: bold; font-style: oblique; color: #77C1EF;" id="menufoot"></p>
                 </div>
                 <div class="footMenu">
-                    <p><a href="#acceuil">Acceuil</a></p>
-                    <p><a href="#aboutM">A propos</a></p>
-                    <p><a href="#services">service</a></p>
-                    <p><a href="#mesReas">Realisations</a></p>
-                    <p><a href="#contact">Contacts</a></p>
+                    <p><a href="#acceuil" id="acceuiFoot"></a></p>
+                    <p><a href="#aboutM" id="aproposfoot"></a></p>
+                    <p><a href="#services" id="serviceFoot"></a></p>
+                    <p><a href="#mesReas" id="realFoot"></a></p>
+                    <p><a href="#contact" id="contactFoot"></a></p>
                 </div>
             </div>
 
             <div class="footer_Social">
                 <div >
-                    <p style="font-size: large; font-weight: bold; font-style: oblique; margin-left: 40px; color: #77C1EF;">Me Suivre</p>
+                    <p style="font-size: large; font-weight: bold; font-style: oblique; margin-left: 40px; color: #77C1EF;" id="followMe"></p>
                 </div>
                 <div class="copyright">
                     <i class="fab fa-facebook-square" id="id1"></i>
@@ -498,16 +492,16 @@
             </div>
 
             <div class="footer_contact">
-                <div class="foot-Contact-Text"><p style="font-size: large; font-weight: bold; font-style: italic;color: #77C1EF;">Contactez nous</p></div>
+                <div class="foot-Contact-Text"><p style="font-size: large; font-weight: bold; font-style: italic;color: #77C1EF;" id="callme"></p></div>
                 <div class="foot-ContactUs">
                     <form action="">
                         <div style="display: flex;">
-                            <input type="text" name="" id="" placeholder="Votre nom">
-                            <input type="text" name="" id="" placeholder="Object" style="margin-left: 20px;">
+                            <input type="text" name="" id="name" placeholder="Votre nom">
+                            <input type="text" name="" id="object" placeholder="Object" style="margin-left: 20px;">
                         </div>
-                        <input type="text" name="" id="" placeholder="Entrer votre email">
-                        <textarea name="" id=""></textarea>
-                        <input type="button" value="Envoyer">
+                        <input type="text" name="" id="mail" placeholder="Entrer votre email">
+                        <textarea name="" id="text"></textarea>
+                        <input type="button" value="Envoyer" id="send">
                     </form>
                 </div>
 
@@ -516,8 +510,10 @@
     </body>
 </html>
 <script type="text/javascript" src="./styles/Jquery/portfolioScript.js"></script>
-
+<script type="text/javascript" src="./styles/jQuery/translation.js"></script>
 <script type="text/javascript" src="./styles/jQuery/githubAPI.js"></script>
+<script type="text/javascript" src="./styles/jQuery/downloadCV.js"></script>
+
 
 
 </body>
