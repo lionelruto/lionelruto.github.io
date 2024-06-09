@@ -26,10 +26,18 @@ const imgLogoContent= document.getElementById("imgLogoDiv")
         const data= await response.json();
         for (const key of data) {
             const name= key.name
+            const lang= key.language
+            const url= key.html_url
+            const langUrl= key.languages_url
+            console.log(key)
             //const description= key.description
             //divReals.textContent= "hello"
             //getGithApiPhoto(name)
-            download()
+            console.log(langUrl)
+
+            const langs= await getLanguages(langUrl)
+            console.log(langs)
+            download(name, lang, url, langs)
         }
 
      }
@@ -37,7 +45,7 @@ const imgLogoContent= document.getElementById("imgLogoDiv")
      
  } 
 
- function download(){
+ function download(name, language, url, langs){
     //const fileName = source.split('/').pop();
     var container = document.getElementById("carroussel-content"); // Récupération du conteneur
 
@@ -47,18 +55,31 @@ const imgLogoContent= document.getElementById("imgLogoDiv")
     var realistType= document.createElement("div")
     var realistInfoTools= document.createElement("div")
 
+    var realistRedirect= document.createElement("a")
+    realistRedirect.style.textDecoration = 'none';
+    realistRedirect.style.color = 'inherit';
+    realistRedirect.href = url
+
+    realistRedirect.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        var nouvellePage = this.getAttribute('href');
+        window.open(nouvellePage, '_blank');
+    });
+
+
+
     realist.classList.add('reaList')
     var imgSource = document.createElement("img")
-    var cssString= "width: 480px; height: 350px; flex-shrink: 0; flex-grow: 1; text-align: center; margin-left: 20px; border: 1px solid #F5F5F5;border-radius: 10px;cursor: pointer;transform: scale(1);transition: transform 300ms;"
+    imgSource.setAttribute("class", "imgBlock")
     //realist.setAttribute("style", cssString)
-    imgSource.src= "./../assets/images/cloudbeds.png"
+    imgSource.src= "./../../assets/images/github_logo.png"
     //var realist = realist.appendChild(imgSource)
 
     realistInfo.classList.add('realist_info')
 
     realistContent.classList.add('realist_info_content')
     var pInfoContent= document.createElement("p")
-    pInfoContent.textContent= "Groupomania"
+    pInfoContent.textContent= name
     pInfoContent.setAttribute("style", "text-align: start; font-size: 26px; font-weight: bold;  margin-top: 5px;")
     realistContent.appendChild(pInfoContent)
     //realistContent.appendChild(realistContent1)
@@ -70,55 +91,103 @@ const imgLogoContent= document.getElementById("imgLogoDiv")
     realistInfoTools.appendChild(pRealType)
 
     realistType.classList.add('realist_type')
-    var imgLogo1= document.createElement("img")
-    imgLogo1.src= "./../assets/images/icons8-android-os-48.png"
-    var imgLogo2= document.createElement("img")
-    imgLogo2.src="./../assets/images/icons8-docker-48.png"
+    for (const lang in langs) {
+        switch(lang){
+            case 'CSS':
+                var imgLogo1= document.createElement("img")
+                imgLogo1.src= "./../../assets/images/icons8-css.svg"
+                realistType.appendChild(imgLogo1)
+                break;
+            case 'HTML':
+                var imgLogo1= document.createElement("img")
+                var imgLogo2= document.createElement("img")
+                imgLogo1.src= "./../../assets/images/icons8-html.svg"
+                imgLogo2.src= "./../../assets/images/icons8-nodejs.svg"
+                realistType.appendChild(imgLogo1)
+                realistType.appendChild(imgLogo2)
+                break;
+            case 'Kotlin':
+                var imgLogo1= document.createElement("img")
+                var imgLogo2= document.createElement("img")
+    
+                imgLogo1.src= "./../../assets/images/icons8-kotlin.svg"
+                imgLogo2.src= "./../../assets/images/icons8-android-os-48.png"
+                realistType.appendChild(imgLogo1)
+                realistType.appendChild(imgLogo2)
 
-    realistType.appendChild(imgLogo1)
-    realistType.appendChild(imgLogo2)
-
+                break;
+            case 'Dockerfile':
+                var imgLogo1= document.createElement("img")
+                imgLogo1.src= "./../../assets/images/icons8-docker-48.png"
+                realistType.appendChild(imgLogo1)
+                break;
+            case 'JavaScript': 
+                var imgLogo1= document.createElement("img")
+                var imgLogo2= document.createElement("img")
+                imgLogo1.src= "./../../assets/images/icons8-javascript.svg"
+                imgLogo2.src= "./../../assets/images/icons8-react-js.svg"
+                realistType.appendChild(imgLogo1)
+                realistType.appendChild(imgLogo2)  
+                break;
+            case 'SCSS':
+                var imgLogo1= document.createElement("img")
+                imgLogo1.src= "./../../assets/images/icons8-sass-48.png"
+                realistType.appendChild(imgLogo1)
+                break;
+            case 'Java':  
+                var imgLogo1= document.createElement("img")
+                imgLogo1.src= "./../../assets/images/icons8-java.svg"
+                realistType.appendChild(imgLogo1) 
+                break;      
+                case 'RobotFramework':  
+                var imgLogo1= document.createElement("img")
+                imgLogo1.src= "./../../assets/images/robotframework-svgrepo-com.svg"
+                realistType.appendChild(imgLogo1) 
+                break;     
+                case 'Gherkin':  
+                var imgLogo1= document.createElement("img")
+                imgLogo1.src= "./../../assets/images/Cucumber.svg"
+                realistType.appendChild(imgLogo1) 
+                break;   
+                 
+         
+        }       
+    }
     realistInfoTools.appendChild(realistType)
     realistContent.appendChild(realistInfoTools)
     realistInfo.appendChild(realistContent)
     realist.appendChild(imgSource)
     realist.appendChild(realistInfo)
-
-    container.appendChild(realist);
-
-
-
-
-    //var title= document.createElement("p")
-    //title.textContent= name
-    //title.setAttribute("style", "color:#77C1EF; font-family: sans-serif; font-size: 20px; margin-top:10px")
-    //var cssString= "width: 480px; height: 350px; flex-shrink: 0; flex-grow: 1; text-align: center; margin-left: 20px; border: 1px solid #F5F5F5;border-radius: 10px;cursor: pointer;transform: scale(1);transition: transform 300ms;"
-    //divContent.classList.add('reaList')
-    //divContent.setAttribute("style",cssString);
-    //el.setAttribute("style", "width: 100%; height:100%; border-radius: 10px")
-	//el.setAttribute("src", `${source}`);
-	//el.setAttribute("download", 'https://raw.githubusercontent.com/lionelruto/OhMyFood/main/black%20man%20at%20office.png');
-	//divContent.appendChild(el);
-    //divContent.appendChild(title)
-    //divContent.addEventListener('mouseover', function(event) {
-        //var divDescription= document.createElement("div")
-        //var divVisitgit= document.createElement("button")
-        //var divVisitSite= document.createElement("button")
-        //divVisitSite.textContent="visiter le site"
-        //divVisitgit.textContent= "Regarder le projet"
-        //divVisitSite.setAttribute("style", "background-color: #FFDF00; border-radius: 35px;border:2px solid #ffffff; color:#ffffff")
-        //divVisitgit.setAttribute("style", "background-color: #FFDF00; border-radius: 35px;border:2px solid #ffffff; color:#ffffff")
-        //divDescription.setAttribute("style", " opacity:0.4; text-align:center; z-index:4; position:absolute; top:0; left:0; right:0; bottom:0; padding:20px; border-radius: 10px; font-family:sans-serif; font-size:20px; display:flex; flex-direction:column; align-items:center")
-        //divDescription.textContent= description
-        //divContent.appendChild(divDescription)
-        //divDescription.appendChild(divVisitSite)
-        //divDescription.appendChild(divVisitgit)
-   // })
-    //divReals.appendChild(divContent)
-
- 	//el.click();
-	//el.remove();
+    realistRedirect.appendChild(realist)
+    container.appendChild(realistRedirect);
 }
+
+async function getLanguages(value){
+    const response= await fetch(
+        `${value}`, 
+        {mode: 'cors'},
+        {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/vnd.github.v3+json',
+                'Content-type': 'application/json',
+               'Autorization': `Bearer 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` 
+            }
+        }
+    );
+
+    if(!response.ok){
+    }
+    if(response.status==200){
+       const data= await response.json();
+       //divReals.textContent= "hello"
+       console.log(data)
+       return data
+       //console.log(data.download_url)
+
+    }
+} 
+
 
  async function getGithApiPhoto( value){
     const response= await fetch(

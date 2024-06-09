@@ -61,6 +61,7 @@ document.getElementById('lang').addEventListener('change', function() {
     var mail = document.getElementById('mail');
     var text = document.getElementById('text');
     var send = document.getElementById('send');
+    var copyrights = document.getElementById('footerEnd_Copyrights')
 
 
 
@@ -120,6 +121,7 @@ document.getElementById('lang').addEventListener('change', function() {
             mail.placeholder = "Enter votre email";
             text.placeholder = "ECrivez ici";
             send.value= "Envoyer"
+            copyrights.textContent="Droits d'auteur © 2021 Lionel Mambi. 💯% Propulsé par Moi (Lionel Mambingo 😎)"
 
 
     } else if(selectedValue === 'en') {
@@ -176,5 +178,6 @@ document.getElementById('lang').addEventListener('change', function() {
         mail.placeholder = "Enter your email";
         text.placeholder = "Write here";
         send.value = "Send";
+        copyrights.textContent="Copyright&copy; 2021 Lionel Mambi. 💯% Powered by Me (Lionel Mambingo😎)"
     }
 });

@@ -16,7 +16,6 @@
         <!-- Two-tone icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
-        <script src="styles/jQuery/anims.js"></script>   
         <link rel="stylesheet" href="styles/sass/index.css">
         <link rel="icon" href="./assets/images/LM-logo/LM-logo/LM bleu.png" type="image/x-icon">
         <link rel="shortcut icon" href="./assets/images/LM-logo/LM-logo/LM bleu.png" type="image/x-icon">
@@ -372,7 +371,7 @@
                         </div>
                 </section>
 
-                <section class="myReals">
+                <section class="myReals" id="mesReas">
                     <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
                         <hr style="align-items: center; height: 3px;border-width: 0;width: 50px; margin: 0; padding: 0; color: 0; background-color: #FFDF00;"/>
                         <h3 style="color: #77C1EF; align-items: center; padding: 10px; text-transform: uppercase;" id="realsTitle"></h3>
@@ -447,69 +446,77 @@
 
         <!--debut du footer et fin du main-->
         <footer class="footer" id="contact">
-            <div class="">
-                <img src="./assets/images/LM-logo/LM-logo/LM bleu.png" style="height: 60px; width: 60px; margin: 40px 0px 0px 100px" alt="">
-            </div>
-
-            <div class="footerInfo">
-                <div>
-                    <p style="font-size: large; font-weight: bold; font-style: oblique; color: #77C1EF;" id="menufoot"></p>
-                </div>
-                <div class="footMenu">
-                    <p><a href="#acceuil" id="acceuiFoot"></a></p>
-                    <p><a href="#aboutM" id="aproposfoot"></a></p>
-                    <p><a href="#services" id="serviceFoot"></a></p>
-                    <p><a href="#mesReas" id="realFoot"></a></p>
-                    <p><a href="#contact" id="contactFoot"></a></p>
-                </div>
-            </div>
-
-            <div class="footer_Social">
-                <div >
-                    <p style="font-size: large; font-weight: bold; font-style: oblique; margin-left: 40px; color: #77C1EF;" id="followMe"></p>
-                </div>
-                <div class="copyright">
-                    <i class="fab fa-facebook-square" id="id1"></i>
-                    <i class="fab fa-twitter-square" id="id2"></i>
-                    <i class="fab fa-linkedin" id="id3"></i>
-                    <i class="fab fa-github icon" id="id4"></i>
+            <div style="display: flex;">
+                <div class="" style="padding: 40px 0px 0px 100px; text-align: center;">
+                    <img src="./assets/images/LM-logo/LM-logo/LM bleu.png" style="height: 60px; width: 60px;" alt="">
+                    <p style="font-style: italic; font-size: larger; color: #FFDF00;font-family: 'Font Awesome 6 Brands';">Lionel Mambingo</p>
                 </div>
 
-                <div class="footer_info">
-                    <div class="footer_info_content">
-                        <i class="material-icons filled" >local_phone</i>
-                        <p>+237696360062</p>
+                <div class="footerInfo">
+                    <div>
+                        <p style="font-size: large; font-weight: bold; font-style: oblique; color: #77C1EF;" id="menufoot"></p>
                     </div>
-                    <div class="footer_info_content">
-                        <i class="material-icons filled" >alternate_email</i>
-                        <p>Lionelmambingo@gmail.com</p>
-                    </div>
-                    <div class="footer_info_content">
-                        <i class="material-icons filled" >place</i>
-                        <p>Douala, Cameroun. Akwa, Rue boué de lapeyrère</p>
+                    <div class="footMenu">
+                        <p><a href="#acceuil" id="acceuiFoot"></a></p>
+                        <p><a href="#aboutM" id="aproposfoot"></a></p>
+                        <p><a href="#services" id="serviceFoot"></a></p>
+                        <p><a href="#mesReas" id="realFoot"></a></p>
+                        <p><a href="#contact" id="contactFoot"></a></p>
                     </div>
                 </div>
-            </div>
 
-            <div class="footer_contact">
-                <div class="foot-Contact-Text"><p style="font-size: large; font-weight: bold; font-style: italic;color: #77C1EF;" id="callme"></p></div>
-                <div class="foot-ContactUs">
-                    <form action="">
-                        <div style="display: flex;">
-                            <input type="text" name="" id="name" placeholder="Votre nom">
-                            <input type="text" name="" id="object" placeholder="Object" style="margin-left: 20px;">
+                <div class="footer_Social">
+                    <div >
+                        <p style="font-size: large; font-weight: bold; font-style: oblique; margin-left: 40px; color: #77C1EF;" id="followMe"></p>
+                    </div>
+                    <div class="copyright">
+                        <a href="https://web.facebook.com/lionel.mambingo" id="resIcons"><i class="fab fa-facebook-square rsIcon" id="id1"></i></a>
+                        <a href="" id="resIcons"><i class="fab fa-twitter-square rsIcon" id="id2"></i></a>
+                        <a href="https://www.linkedin.com/in/lionel-mambingo-1b5681147/" id="resIcons"><i class="fab fa-linkedin rsIcon" id="id3"></i></a>
+                        <a href="https://github.com/lionelruto" id="resIcons"><i class="fab fa-github icon rsIcon" id="id4"></i></a>
+                    </div>
+
+                    <div class="footer_info">
+                        <div class="footer_info_content">
+                            <i class="material-icons filled" >local_phone</i>
+                            <p>+237-696360062</p>
                         </div>
-                        <input type="text" name="" id="mail" placeholder="Entrer votre email">
-                        <textarea name="" id="text"></textarea>
-                        <input type="button" value="Envoyer" id="send">
-                    </form>
+                        <div class="footer_info_content">
+                            <i class="material-icons filled" >alternate_email</i>
+                            <p>Lionelmambingo@gmail.com</p>
+                        </div>
+                        <div class="footer_info_content">
+                            <i class="material-icons filled" >place</i>
+                            <p>Douala, Cameroun. Akwa, Rue boué de lapeyrère</p>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="footer_contact">
+                    <div class="foot-Contact-Text"><p style="font-size: large; font-weight: bold; font-style: italic;color: #77C1EF;" id="callme"></p></div>
+                    <div class="foot-ContactUs">
+                        <form action="">
+                            <div style="display: flex;">
+                                <input type="text" name="" id="name" placeholder="Votre nom">
+                                <input type="text" name="" id="object" placeholder="Object" style="margin-left: 20px;">
+                            </div>
+                            <input type="text" name="" id="mail" placeholder="Entrer votre email">
+                            <textarea name="" id="text"></textarea>
+                            <input type="button" value="Envoyer" id="send">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="footerEnd">
+                <p class="footerEnd_Copyrights" id="footerEnd_Copyrights"></p>
             </div>
         </footer>
         <script type="text/javascript" src="./styles/Jquery/portfolioscript.js"></script>
         <script type="text/javascript" src="./styles/jQuery/translation.js"></script>
         <script type="text/javascript" src="./styles/jQuery/githubAPI.js"></script>
+        <script src="styles/jQuery/anims.js"></script>   
         <script type="text/javascript" src="./styles/jQuery/downloadCV.js"></script>
     </body>
 

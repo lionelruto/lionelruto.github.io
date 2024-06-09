@@ -26,6 +26,7 @@ body {
 
 a {
   text-decoration: none;
+  columns: inherit;
 }
 a:visited {
   color: inherit;
@@ -224,9 +225,9 @@ header .breadcontent #breadcumbs {
   position: absolute;
   top: 88px;
   right: 10px;
-  visibility: visible;
   padding: 15px;
   height: 75%;
+  visibility: visible;
   transform: scale(1);
   transition: transform 300ms;
 }
@@ -1475,13 +1476,18 @@ header .breadcontent #breadcumbs {
 .myReals .carroussel-content .reaList:hover .carroussel-content {
   animation-play-state: paused;
 }
-.myReals .carroussel-content .reaList img {
+.myReals .carroussel-content .reaList .imgBlock {
   width: 100%;
   height: 70%;
   object-fit: cover;
   object-position: center;
+  background-color: #77C1EF;
+  opacity: 0.8;
   border-start-start-radius: 10px;
   border-start-end-radius: 10px;
+}
+.myReals .carroussel-content .reaList .imgBlock:hover {
+  background-color: #ffffff;
 }
 .myReals .carroussel-content .reaList .realist_info {
   display: flex;
@@ -1508,11 +1514,11 @@ header .breadcontent #breadcumbs {
   justify-content: space-around;
   display: flex;
   align-items: center;
-  width: 50px;
 }
 .myReals .carroussel-content .reaList .realist_info .realist_info_content .realist_info_tools .realist_type img {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
 }
 .myReals .carroussel-content .reaList .realist_info .realist_info_content .realist_info_tools .realist_type p {
   color: #77C1EF;
@@ -1531,9 +1537,7 @@ header .breadcontent #breadcumbs {
 /*footer*/
 footer {
   margin-top: 50px;
-  margin-left: 10px;
   color: #000000;
-  display: flex;
   border-top: 1px solid #b5dff9;
   /*hr{
       height: 200px;
@@ -1578,17 +1582,29 @@ footer .footer_Social .copyright #id1 {
   font-size: 30px;
   color: #4078c0;
 }
+footer .footer_Social .copyright #id1:hover {
+  color: #77C1EF;
+}
 footer .footer_Social .copyright #id2 {
   font-size: 30px;
   color: #0072b1;
+}
+footer .footer_Social .copyright #id2:hover {
+  color: #77C1EF;
 }
 footer .footer_Social .copyright #id3 {
   font-size: 30px;
   color: #4267B2;
 }
+footer .footer_Social .copyright #id3:hover {
+  color: #77C1EF;
+}
 footer .footer_Social .copyright #id4 {
   font-size: 30px;
   color: #4078c0;
+}
+footer .footer_Social .copyright #id4:hover {
+  color: #77C1EF;
 }
 footer .footerInfo {
   text-align: center;
@@ -1598,6 +1614,7 @@ footer .footerInfo {
 footer .foot-ContactUs {
   background-color: #ffffff;
   margin-top: 20px;
+  padding-right: 50px;
 }
 footer .foot-ContactUs input, footer .foot-ContactUs textarea {
   border: 1px solid #F5F5F5;
@@ -1706,6 +1723,19 @@ footer .footer_contact .formContaint .myForm .form-control {
 }
 footer .footer_contact .formContaint .myForm .form-group {
   border: none;
+}
+footer .footerEnd {
+  width: 100%;
+  background-color: #77C1EF;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+footer .footerEnd p {
+  color: #ffffff;
+  font-size: small;
 }
 
 /*Animations*/
