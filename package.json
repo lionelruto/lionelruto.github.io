@@ -14,7 +14,9 @@
       "express": "^4.18.2",
       "nodemon": "^2.0.22",
       "sass": "^1.49.11",
-      "sass-watch": "^0.1.0"
+      "sass-watch": "^0.1.0",
+      "concurrently": "^8.2.2"
+
     }
   },
   "devDependencies": {
