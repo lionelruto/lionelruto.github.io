@@ -108,6 +108,7 @@ body  {
 
  a {
      text-decoration: none;
+     columns: inherit;
 
      &:visited{
          color: inherit;
@@ -152,6 +153,7 @@ body  {
             color: #FFDF00;
             font-size: 40px;
             cursor: pointer;
+            //visibility: hidden;
 
             
         }
@@ -340,11 +342,9 @@ body  {
     position: absolute;
     top: 88px;
     right: 10px;
-    visibility: visible;
     padding: 15px;
     height: 75%;
-
-
+    visibility: visible;
     transform: scale(1);
     transition: transform 300ms;
 
@@ -743,13 +743,20 @@ body  {
                 animation-play-state: paused;
             }
 
-            img{
+            .imgBlock{
                 width: 100%;
                 height: 70%;
                 object-fit: cover;
                 object-position: center;
+                background-color: $color-palette1;
+                opacity: 0.8;
                 border-start-start-radius: 10px;
                 border-start-end-radius: 10px;
+                &:hover{
+                    background-color: $color-background;
+                }
+
+
             }
 
             .realist_info{
@@ -777,15 +784,16 @@ body  {
                             justify-content: space-around;
                             display: flex;
                             align-items: center;
-                            width: 50px;
+                            //width: 50px;
     
                             img{
-                                width: 15px; 
-                                height: 15px; 
+                                width: 18px; 
+                                height: 18px; 
+                                margin-left: 10px;
                             }
     
                             p{
-                                color: #77C1EF;
+                                color: $color-palette1;
                             }
                         }
                     }
@@ -814,10 +822,7 @@ body  {
   /*footer*/
   footer{
       margin-top: 50px;
-
-      margin-left: 10px;
       color: $color-black;
-      display: flex;
       border-top: 1px solid $color-palette-opacity;
 
       /*hr{
@@ -860,13 +865,15 @@ body  {
 
           i{
             margin-left: 20px;
+
           }
             @each $var, $color in $iconsColor {
                 #id#{$var}{
                   font-size: 30px;
                   color: $color;
                     &:hover{
-                        
+                        color: $color-palette1;
+
                     }
                 }
                 
@@ -885,6 +892,7 @@ body  {
       .foot-ContactUs{
         background-color: $color-background;
         margin-top: 20px;
+        padding-right: 50px;
 
         input, textarea{
             border: 1px solid $color-background-third;
@@ -893,6 +901,8 @@ body  {
                 border-color: $color-palette1;
                 outline: none;
             }
+
+
         }
 
 
@@ -1012,7 +1022,21 @@ body  {
     
         }
       }
+      .footerEnd{
+        width: 100%;
+        background-color: $color-palette1;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
 
+        p{
+            color: $color-background;
+            font-size: small;
+            
+        }
+    }
 
     }
 
