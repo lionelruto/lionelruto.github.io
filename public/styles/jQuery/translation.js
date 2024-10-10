@@ -63,6 +63,13 @@ document.getElementById('lang').addEventListener('change', function() {
     var send = document.getElementById('send');
     var copyrights = document.getElementById('footerEnd_Copyrights')
 
+    var call = document.getElementById('call');
+    var addr = document.getElementById('addr');
+    var addrName = document.getElementById('addrName');
+    var email = document.getElementById('email');
+    var number = document.getElementById('number');
+
+
 
 
 
@@ -123,6 +130,12 @@ document.getElementById('lang').addEventListener('change', function() {
             send.value= "Envoyer"
             copyrights.textContent="Droits d'auteur © 2021 Lionel Mambi. 💯% Propulsé par Moi (Lionel Mambingo 😎)"
 
+            addr.textContent= "Addresse";
+            addrName.textContent= "1146 Rue du Grand-Pic H7L 0K3, Laval, Québec";
+            call.textContent= "Appellez";
+
+
+
 
     } else if(selectedValue === 'en') {
         console.log('Selected Language: English');
@@ -178,6 +191,10 @@ document.getElementById('lang').addEventListener('change', function() {
         mail.placeholder = "Enter your email";
         text.placeholder = "Write here";
         send.value = "Send";
-        copyrights.textContent="Copyright&copy; 2021 Lionel Mambi. 💯% Powered by Me (Lionel Mambingo😎)"
+        copyrights.textContent="Copyright&copy; 2021 Lionel Mambi. 💯% Powered by Me (Lionel Mambingo😎)";
+
+        addr.textContent= "Address";
+        addrName.textContent= "1146 Rue du Grand-Pic H7L 0K3, Laval, Québec";
+        call.textContent= "Call";
     }
 });
