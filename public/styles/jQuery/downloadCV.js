@@ -1,8 +1,7 @@
+
+var fileURL = "";
 // Function to download the file
-function downloadFile() {
-    // Replace 'fileURL' with the URL of your file
-    var fileURL = "./../../media/Cv_Mambingo_Astrid.pdf";
-    
+function downloadFile() {    
     // Create a temporary anchor element
     var downloadLink = document.createElement('a');
     
@@ -21,6 +20,37 @@ function downloadFile() {
     // Remove the download link from the body
     document.body.removeChild(downloadLink);
 }
+
+//Pour récupérer le lien du cv en fonction de la langue
+const recupCV = async ()=>{
+    window.addEventListener('DOMContentLoaded', function() {
+        // Déclencher manuellement l'événement de changement de langue au chargement de la page
+        var selectElement = document.getElementById('lang');
+        var event = new Event('change');
+        selectElement.dispatchEvent(event);
+    
+    
+    });
+    // Replace 'fileURL' with the URL of your file
+   await document.getElementById('lang').addEventListener('change', function(){
+       var selected= document.getElementById('lang');
+       var selectedValue= selected.options[selected.selectedIndex].value;
+    
+       switch(selectedValue){
+    
+        case "fr": 
+            fileURL = "./../../media/Astrid_Moutome_CV_fr.pdf";
+            break;
+        case "en": 
+            fileURL = "./../../media/Astrid_Moutome_CV-EN.pdf";
+            break;
+       } 
+    })
+    
+    //console.log("fileURL")
+}
+
+recupCV();
 
 // Attach an event listener to the button with the id 'btncv'
 document.getElementById('btncv').addEventListener('click', function() {

@@ -3,6 +3,8 @@ window.addEventListener('DOMContentLoaded', function() {
     var selectElement = document.getElementById('lang');
     var event = new Event('change');
     selectElement.dispatchEvent(event);
+
+
 });
 
 document.getElementById('lang').addEventListener('change', function() {
@@ -57,10 +59,16 @@ document.getElementById('lang').addEventListener('change', function() {
 
     var callme = document.getElementById('callme');
     var name = document.getElementById('name');
-    var object = document.getElementById('object');
+    var object = document.getElementById('subject');
     var mail = document.getElementById('mail');
-    var text = document.getElementById('text');
+    var text = document.getElementById('message');
     var send = document.getElementById('send');
+
+    var call = document.getElementById('call');
+    var addr = document.getElementById('addr');
+    var addrName = document.getElementById('addrName');
+
+
 
 
 
@@ -113,13 +121,20 @@ document.getElementById('lang').addEventListener('change', function() {
             contactfloat.textContent = "Contact"
 
             followMe.textContent = "Me Suivre"
-            callme.textContent = "Contact nous"
+            callme.textContent = "Me Contacter"
 
             name.placeholder = "Votre nom";
             object.placeholder = "Object";
             mail.placeholder = "Enter votre email";
             text.placeholder = "ECrivez ici";
-            send.value= "Envoyer"
+            send.textContent= "Envoyer"
+            //copyrights.textContent="Droits d'auteur © 2021 Lionel Mambi. 💯% Propulsé par Moi (Lionel Mambingo 😎)"
+
+            addr.textContent = "Addresse";
+            addrName.textContent = "1146 Rue du Grand-Pic H7L 0K3, Laval, Québec";
+            call.textContent = "Appellez";
+
+
 
 
     } else if(selectedValue === 'en') {
@@ -175,6 +190,11 @@ document.getElementById('lang').addEventListener('change', function() {
         object.placeholder = "Object";
         mail.placeholder = "Enter your email";
         text.placeholder = "Write here";
-        send.value = "Send";
+        send.textContent = "Send";
+        //copyrights.textContent="Copyright&copy; 2021 Lionel Mambi. 💯% Powered by Me (Lionel Mambingo😎)";
+
+        addr.textContent= "Address";
+        addrName.textContent= "1146 Rue du Grand-Pic H7L 0K3, Laval, Québec";
+        call.textContent= "Call";
     }
 });
