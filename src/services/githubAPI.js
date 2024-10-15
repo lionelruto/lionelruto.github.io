@@ -217,12 +217,9 @@ async function getLanguages(value){
 async function animatedImgs (){
     document.addEventListener('DOMContentLoaded',()=>{
         const container= document.querySelector(".AboutMe")
-
-    
         //divImg.src = "../../assets/images/cloudbeds.png"
         //divImg.classList.add("imgLogo2")
         //container.appendChild(divImg); 
-
         container.addEventListener('mouseenter', ()=>{
 
             if (!divImg.classList.contains("imgLogo2")){

@@ -1,1 +1,2 @@
-import '../services/sendMail.js'
+import './services/githubAPI.js' //gestion des projets via github
+import './services/sendMail.js'
