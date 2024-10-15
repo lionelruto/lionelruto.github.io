@@ -33,7 +33,7 @@ const recupCV = async ()=>{
         selectElement.dispatchEvent(event);
     });
 
-    if (host === "localhost"){
+    if (host === "dev.mambingolionel.com"){
         if(url.endsWith('/fr')){
             fileURL = "./../../media/Cv_fullstack/Astrid_Moutome_CV_fr.pdf";
         }else if (url.endsWith('/en')){
@@ -54,7 +54,7 @@ const recupCV = async ()=>{
              break;
         } 
      })*/
-    }else if (host === "dev.mambingolionel.com"){
+    }else if (host === "mambingolionel.com"){
         if(url.endsWith('/fr')){
             fileURL = "./../../media/Cv_QA/CV Mambingo Astrid- Fr.pdf";
         }else if (url.endsWith('/en')){

@@ -198,7 +198,7 @@ function displayLang(jobExpFr){
 function changeProfileInfo(){
     const myhost = window.location.hostname
     console.log(myhost)
-    if (myhost === "localhost"){
+    if (myhost === "dev.mambingolionel.com"){
         console.log('changeLang')
         if(url.endsWith('/fr')){
             displayLang(DevJobExperiencesFR)
@@ -213,8 +213,10 @@ function changeProfileInfo(){
         if(myurl.endsWith('/fr')){
             displayLang(QaJobExperiencesFR)
         }else if (myurl.endsWith('/en')){
-            displayLang(QavJobExperiencesEN)
+            displayLang(QaJobExperiencesEN)
 
+        }else{
+            displayLang(QaJobExperiencesFR)
         }
     }
 
